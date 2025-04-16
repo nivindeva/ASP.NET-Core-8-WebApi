@@ -20,7 +20,6 @@ namespace Intranet.Infrastructure.Persistence.Repositories
             _connectionString = _configuration.GetConnectionString("DefaultConnection")
                                 ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
         }
-
         protected SqlConnection CreateConnection() => new SqlConnection(_connectionString);
     }
 }
